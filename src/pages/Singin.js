@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 function Singin() {
   const navigate = useNavigate();
 
-  const irAHome = () => {
-    navigate("/home");
+  const irAlogin = () => {
+    navigate("/");
   };
 
   return (
     <div className="">
-      <button onClick={irAHome}>Registrar</button>
+      <button onClick={irAlogin}>Registrar</button>
     </div>
   );
 }

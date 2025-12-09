@@ -1,31 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import Singin from "./pages/Singin";
-import Home from "./pages/Home";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Login />,
-  },
-  {
-    path: "/singin",
-    element: <Singin />,
-  },
-  {
-    path: "/home",
-    element: <Home />,
-  },
-]);
+import AdminHome from "./pages/AdminHome";
+import DoctorHome from "./pages/DoctorHome";
+import PacienteHome from "./pages/PacienteHome";
 
 function App() {
-  //funcion para direccionar???
-
   return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/admin" element={<AdminHome />} />
+        <Route path="/doctor" element={<DoctorHome />} />
+        <Route path="/paciente" element={<PacienteHome />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
